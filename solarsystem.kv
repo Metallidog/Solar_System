@@ -1,0 +1,56 @@
+<SSObject>:    
+    canvas:
+        Color:
+            rgb: self.color
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<SolarSystem>:
+    sun: our_sun
+    earth: our_earth
+    moon: our_moon
+    venus: our_venus
+    mercury: our_mercury
+    
+    SSObject:
+        id: our_sun
+        pos: root.width/2-70, root.height/2-70
+        size: 150,150
+        
+    SSObject:
+        id: our_earth
+        size: 30,30
+        angle: 0
+        radius: 250
+        rot_speed: .5
+        pos_x: root.width/2 
+        pos_y: root.height/2 
+        
+    SSObject:
+        id: our_moon
+        size: 8,8
+        angle: 0
+        radius: 20
+        rot_speed: 6.5
+        pos_x: root.earth.pos[0]+11
+        pos_y: root.earth.pos[1]+11
+ 
+    SSObject:
+        id: our_venus
+        size: 30,30
+        angle: 0
+        radius: 200
+        rot_speed: .85
+        pos_x: root.width/2 
+        pos_y: root.height/2 
+        
+    SSObject:
+        id: our_mercury
+        size: 15,15
+        angle: 0
+        radius: 90
+        rot_speed: 2.2
+        pos_x: root.width/2
+        pos_y: root.height/2
+    
