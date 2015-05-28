@@ -1,7 +1,7 @@
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.clock import Clock
-from kivy.properties import ObjectProperty, NumericProperty
+from kivy.properties import ObjectProperty, NumericProperty, ListProperty
 #from kivy.graphics import Color
 import math
 
@@ -10,10 +10,9 @@ class SSObject(Widget):
     pos_y = NumericProperty(0)
     #pos = ReferenceListProperty(pos_x, pos_y)
     angle = NumericProperty(0)
-    color = (1,1,1)
+    color = ListProperty((1,1,1))
     
     def move(self):
-        self.color = (0,0,1)
         self.angle += self.rot_speed
         if self.angle >= 360:
             self.angle = 0
